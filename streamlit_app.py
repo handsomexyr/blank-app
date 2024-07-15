@@ -12,7 +12,7 @@ st.set_page_config(
 
 @st.cache_resource
 def get_model():
-    model_path = "../chatglm2-6b"
+    model_path = "THUDM/chatglm2-6b"
     model = AutoModel.from_pretrained(model_path, trust_remote_code=True).half().cuda()
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 # 加载 label lora权重
